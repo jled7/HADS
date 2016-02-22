@@ -116,6 +116,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="master\standard.Master" />
+    <None Include="Properties\PublishProfiles\HADS10 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\HADS10 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

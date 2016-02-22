@@ -23,13 +23,11 @@ namespace WebApplication3
             Boolean status = DBUtility.registerUser(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox5.Text, TextBox6.Text, TextBox7.Text, TextBox8.Text, 0, false);
             if (status)
             {
-                //Esto como lo hariamos??? con la funciona WriteFile creo que se puede hacer como con symfony una pagina predeterminada de error(para el estilo) y le pasas el error en un string nose
-                //bueno igual ni lees esto xD
-               // Response.Write("<h1>Todo correcto</h1>"); usar redirect
+                Response.Redirect("~/Correcto.aspx");
             }
             else
             {
-                //Response.Write("<h1>Todo incorrecto</h1>");
+                errorMessage.Text = "Ya existe un usuario con ese correo";
             }
             
         }

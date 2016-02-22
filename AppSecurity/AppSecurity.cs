@@ -9,9 +9,10 @@ namespace AppSecurity
 {
     public class AppSecurity
     {
+        public static string SMTP_SERVER = "smtp.btconnect.com";
         public static Boolean sendConfirmEmail(string mail, int numConfirmacion)
         {
-            SmtpClient client = new SmtpClient("smtp.fastweb.it");
+            SmtpClient client = new SmtpClient(SMTP_SERVER, 25);
 
             MailAddress from = new MailAddress("admin@appname.com", "Admin", System.Text.Encoding.UTF8);
 

@@ -1,22 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Confirmar.aspx.cs" Inherits="WebApplication3.Confirmar" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/master/standard.Master" AutoEventWireup="true" CodeBehind="Confirmar.aspx.cs" Inherits="WebApplication3.Confirmar" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-        <asp:Label ID="Label1" runat="server" Text="placeholder mensaje de confirmacion"></asp:Label>
+<asp:Content ID="Content1" ContentPlaceHolderID="headContent" runat="server">
+    <title>Confirmacion</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="bodyContent" runat="server">
+  <div>
+        <br />
+        <center><h2><asp:Label ID="Label1" runat="server" Text="Error en la confirmacion"></asp:Label></h2>
     
     </div>
-        <p>
-            &nbsp;</p>
+
         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Inicio.aspx">Inicio</asp:HyperLink>
-    </form>
-</body>
-</html>
+    </center>
+</asp:Content>

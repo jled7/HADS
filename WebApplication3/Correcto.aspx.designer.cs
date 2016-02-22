@@ -10,6 +10,6 @@
 namespace WebApplication3 {
     
     
-    public partial class placeholder {
+    public partial class Correcto {
     }
 }

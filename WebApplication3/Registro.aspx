@@ -107,10 +107,11 @@
                 </tr>
             </table>
             <br />
+            <span style="color:red"><asp:Label ID="errorMessage" runat="server" ></asp:Label></span>
             <br />
             <br />
             <asp:Button ID="Button1" runat="server" Text="Aceptar" OnClick="Button1_Click" />
-            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Inicio.aspx">Cancelar</asp:LinkButton>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Inicio.aspx">Cancelar</asp:HyperLink>
             <br />
             <br />
             <br />

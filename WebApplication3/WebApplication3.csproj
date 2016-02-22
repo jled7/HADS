@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Confirmar.aspx" />
+    <Content Include="Correcto.aspx" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\style.css" />
     <Content Include="js\bootstrap.min.js" />
@@ -75,6 +76,13 @@
     </Compile>
     <Compile Include="Confirmar.aspx.designer.cs">
       <DependentUpon>Confirmar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Correcto.aspx.cs">
+      <DependentUpon>Correcto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Correcto.aspx.designer.cs">
+      <DependentUpon>Correcto.aspx</DependentUpon>
     </Compile>
     <Compile Include="master\standard.Master.cs">
       <DependentUpon>standard.Master</DependentUpon>

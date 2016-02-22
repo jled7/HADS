@@ -1,17 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="placeholder.aspx.cs" Inherits="WebApplication3.placeholder" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/master/standard.Master" AutoEventWireup="true" CodeBehind="placeholder.aspx.cs" Inherits="WebApplication3.placeholder" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="Content1" ContentPlaceHolderID="headContent" runat="server">
+    <title>Pagina inicial</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="bodyContent" runat="server">
+   <h1>Congrats!</h1>
+</asp:Content>

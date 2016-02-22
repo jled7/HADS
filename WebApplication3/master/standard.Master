@@ -74,7 +74,7 @@
     <footer>
         <div class="container">
             <p class="pull-right"><a href="#">Back to top</a></p>
-            <p>&copy; 2015 TechCybo.com &middot; <a href="Inicio.aspx">Home</a> &middot; <a href="#">About</a> &middot; <a href="#">Contact</a> &middot; <a href="#">Products</a></p>
+            <p>&copy; 2016 HADS10 &middot; <a href="Inicio.aspx">Home</a> &middot; <a href="#">About</a> &middot; <a href="Registro.aspx">Register</a></p>
         </div>
     </footer>
    

@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Confirmar.aspx" />
+    <Content Include="css\bootstrap.min.css" />
     <Content Include="css\style.css" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="placeholder.aspx" />

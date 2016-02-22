@@ -11,7 +11,7 @@ namespace AppSecurity
     {
         public static Boolean sendConfirmEmail(string mail, int numConfirmacion)
         {
-            SmtpClient client = new SmtpClient("outgoing.yahoo.verizon.net");
+            SmtpClient client = new SmtpClient("smtp.fastweb.it");
 
             MailAddress from = new MailAddress("admin@appname.com", "Admin", System.Text.Encoding.UTF8);
 

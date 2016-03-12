@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/master/standard.Master" AutoEventWireup="true" CodeBehind="Profesor.aspx.cs" Inherits="WebApplication3.WebForm1" %>
-
-
+﻿<%@ Page Language="C#" MasterPageFile="~/master/standard.Master" AutoEventWireup="true" CodeBehind="Profesor.aspx.cs" Inherits="WebApplication3.Profesor" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headContent" runat="server">
     <title>Pagina de Profesor</title>
@@ -17,8 +15,9 @@
             <br />
                <asp:Panel ID="Panel5" runat="server" Height="81px">
              <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TareasProfesor.aspx">Tareas</asp:HyperLink>
+                   <br>
                    </br>
-                   Desconexion</br>
+                   Desconexion<br></br>
                    </asp:Panel>
      
         </asp:Panel>

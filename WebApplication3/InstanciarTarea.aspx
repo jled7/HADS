@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/master/standard.Master" AutoEventWireup="true" CodeBehind="InstanciarTarea.aspx.cs" Inherits="WebApplication3.WebForm1" %>
-
-
+﻿<%@ Page Language="C#" MasterPageFile="~/master/standard.Master" AutoEventWireup="true" CodeBehind="InstanciarTarea.aspx.cs" Inherits="WebApplication3.InstanciarTarea1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headContent" runat="server">
     <title>Instanciar Tarea</title>
@@ -16,10 +14,10 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
                <asp:Panel ID="Panel5" runat="server" Height="81px">
-                   Añadir Formulario de Tarea</br>
-                   OK</br>
+                   Añadir Formulario de Tarea<br />
+                   OK<br />
              <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TareasAlumno.aspx">Ver Tareas</asp:HyperLink>
-                   </br>
+                   <br />
                    </asp:Panel>
      
         </asp:Panel>

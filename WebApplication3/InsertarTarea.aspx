@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/master/standard.Master" AutoEventWireup="true" CodeBehind="InsertarTarea.aspx.cs" Inherits="WebApplication3.WebForm1" %>
-
-
+﻿<%@ Page Language="C#" MasterPageFile="~/master/standard.Master" AutoEventWireup="true" CodeBehind="InsertarTarea.aspx.cs" Inherits="WebApplication3.InsertarTarea1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="headContent" runat="server">
     <title>Insertar Tarea</title>

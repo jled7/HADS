@@ -10,7 +10,7 @@
 namespace WebApplication3 {
     
     
-    public partial class WebForm1 {
+    public partial class Alumno1 {
         
         /// <summary>
         /// Control Panel3.

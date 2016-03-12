@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication3.master
+namespace WebApplication3
 {
     public partial class Profesor : System.Web.UI.Page
     {

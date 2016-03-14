@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using System.Data.SqlClient;
 using AppSecurity;
 
@@ -203,6 +204,28 @@ namespace AppOverlay
                 return false;
             }
             return true;
+        }
+        public static DataTable getAsignaturas(String email)
+        {
+            DataTable dataTable = new DataTable();
+            DataSet dataSet = new DataSet();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand command1 = new SqlCommand("SELECT Asignaturas.codigo FROM EstudiantesGrupo INNER JOIN GruposClase ON EstudiantesGrupo.Grupo = GruposClase.codigo INNER JOIN Asignaturas ON GruposClase.codigoasig = Asignaturas.codigo WHERE (EstudiantesGrupo.Email = '" + email + "')", connection);
+            adapter = new SqlDataAdapter(command1);
+            adapter.Fill(dataSet, "asignaturas"); //*
+            dataTable = dataSet.Tables["asignaturas"];
+            return dataTable;
+        }
+        public static DataTable getTareas(String codAsig)
+        {
+            DataTable dataTable = new DataTable();
+            DataSet dataSet = new DataSet();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand command1 = new SqlCommand("SELECT Codigo,Descripcion,HEstimadas,TipoTarea FROM TareasGenericas WHERE Explotacion='true' AND  CodAsig='" + codAsig + "'", connection);
+            adapter = new SqlDataAdapter(command1);
+            adapter.Fill(dataSet, "tareas"); //*
+            dataTable = dataSet.Tables["tareas"];
+            return dataTable;
         }
         public static void close()
         {

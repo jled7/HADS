@@ -13,6 +13,18 @@ namespace WebApplication3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["email"] != null)
+            {
+                switch (Session["tipo"].ToString())
+                {
+                    case "P":
+                        Response.Redirect("~/Profesor.aspx", true);
+                        break;
+                }
+            } else {
+                Response.Redirect("Inicio.aspx");
+            }
+
             if (!Page.IsPostBack) {
                 DropDownList1.DataSource = DBUtility.getAsignaturas(Session["email"].ToString());
                 DropDownList1.DataTextField = "codigo";
@@ -31,7 +43,13 @@ namespace WebApplication3
 
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            Response.Redirect("InstanciarTarea.aspx&codigo=" + GridView1.Rows[e.RowIndex].Cells[1].Text);
+            Response.Redirect("InstanciarTarea.aspx?codigo=" + GridView1.Rows[e.RowIndex].Cells[1].Text);
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("Inicio.aspx");
         }
 
 

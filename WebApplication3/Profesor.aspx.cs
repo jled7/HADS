@@ -11,7 +11,25 @@ namespace WebApplication3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["email"] != null)
+            {
+                switch (Session["tipo"].ToString())
+                {
+                    case "A":
+                        Response.Redirect("~/Alumno.aspx", true);
+                        break;
+                }
+            }
+            else
+            {
+                Response.Redirect("Inicio.aspx");
+            }
+        }
 
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("Inicio.aspx");
         }
     }
 }

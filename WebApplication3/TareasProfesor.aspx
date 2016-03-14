@@ -53,7 +53,7 @@
                    <br />
                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Profesor.aspx">Pagina Principal</asp:HyperLink>
                    <br />
-                   Desconexion<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS10ConnectionString %>" SelectCommand="SELECT Asignaturas.codigo FROM ProfesoresGrupo INNER JOIN GruposClase ON ProfesoresGrupo.codigogrupo = GruposClase.codigo INNER JOIN Asignaturas ON GruposClase.codigoasig = Asignaturas.codigo WHERE (ProfesoresGrupo.email = @mail)">
+                   <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Desconexion" /><asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS10ConnectionString %>" SelectCommand="SELECT Asignaturas.codigo FROM ProfesoresGrupo INNER JOIN GruposClase ON ProfesoresGrupo.codigogrupo = GruposClase.codigo INNER JOIN Asignaturas ON GruposClase.codigoasig = Asignaturas.codigo WHERE (ProfesoresGrupo.email = @mail)">
                        <SelectParameters>
                            <asp:SessionParameter Name="mail" SessionField="email" />
                        </SelectParameters>

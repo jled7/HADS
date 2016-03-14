@@ -227,6 +227,35 @@ namespace AppOverlay
             dataTable = dataSet.Tables["tareas"];
             return dataTable;
         }
+
+        public static DataTable getTareasEstudiante(String email)
+        {
+            DataTable dataTable = new DataTable();
+            DataSet dataSet = new DataSet();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand command1 = new SqlCommand("SELECT CodTarea, HEstimadas, HReales FROM EstudiantesTareas WHERE Email='" + email + "'", connection);
+            adapter = new SqlDataAdapter(command1);
+            adapter.Fill(dataSet, "tareasE"); //*
+            dataTable = dataSet.Tables["tareasE"];
+            return dataTable;
+        }
+        public static Boolean instanciarTarea(string email, string codTarea, int hEstimadas, int hReales)
+        {
+            connect();
+            string commandString = "INSERT INTO EstudiantesTareas VALUES ('" + email + "', '" + codTarea + "', '" + hEstimadas + "', '" + hReales + "')";
+            SqlCommand command = new SqlCommand(commandString, connection);
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("[Error] Unable to execute command. " + ex);
+                return false;
+            }
+            close();
+            return true;
+        }
         public static void close()
         {
             connection.Close();

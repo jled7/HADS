@@ -12,6 +12,18 @@ namespace WebApplication3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["email"] != null)
+            { 
+                    switch(Session["tipo"].ToString()) 
+                    {
+                        case "P":
+                            Response.Redirect("~/Profesor.aspx", true);
+                            break;
+                        case "A":
+                            Response.Redirect("~/Alumno.aspx", true);
+                            break;
+                    }
+            }
             if (DBUtility.connect())
             {
                 Console.WriteLine("[Success] Connected to the database. ");
@@ -31,11 +43,13 @@ namespace WebApplication3
                 {
                     case 'P':
                         Session["email"] = TextBox1.Text;
-                        Response.Redirect("~/TareasProfesor.aspx", true);
+                        Session["tipo"] = "P";
+                        Response.Redirect("~/Profesor.aspx", true);
                         break;
                     case 'A': 
                         Session["email"] = TextBox1.Text;
-                        Response.Redirect("~/TareasAlumno.aspx", true);
+                        Session["tipo"] = "A";
+                        Response.Redirect("~/Alumno.aspx", true);
                         break;
                     default:
                         errorMessage.Text = "Login incorrecto";

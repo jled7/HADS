@@ -20,17 +20,29 @@ namespace WebApplication3
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Boolean status = DBUtility.login(TextBox1.Text, TextBox2.Text);
-            if (status)
+            char status = DBUtility.login(TextBox1.Text, TextBox2.Text);
+            if (!DBUtility.isUserConfirmed(TextBox1.Text))
             {
-                if (DBUtility.isUserConfirmed(TextBox1.Text))
-                    Response.Redirect("~/placeholder.aspx", true);
-                else
-                    errorMessage.Text = "Confirme el usuario";
+                errorMessage.Text = "Confirme el usuario";
+            }
+            else 
+            {
+                switch (status)
+                {
+                    case 'P':
+                        Session["email"] = TextBox1.Text;
+                        Response.Redirect("~/TareasProfesor.aspx", true);
+                        break;
+                    case 'A': 
+                        Session["email"] = TextBox1.Text;
+                        Response.Redirect("~/TareasAlumno.aspx", true);
+                        break;
+                    default:
+                        errorMessage.Text = "Login incorrecto";
+                        break;
+                }
+            }         
 
-            } 
-            else
-            errorMessage.Text = "Login incorrecto";
         }
         protected void Page_Unload(object sender, EventArgs e)
         {

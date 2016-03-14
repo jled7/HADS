@@ -26,7 +26,6 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
                <asp:Panel ID="Panel5" runat="server" Height="81px">
-                   Añadir Formulario de Tarea<br>
                    <table style="width:100%;">
                        <tr>
                            <td class="auto-style2">Codigo:</td>

@@ -26,7 +26,7 @@
                        <asp:ListItem>Tipo Tarea</asp:ListItem>
                    </asp:CheckBoxList>
                    <br />
-                   <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+                   <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Actualizar" />
                    <br />
                    <br />
                    <asp:GridView ID="GridView1" runat="server" AllowSorting="True" OnRowUpdating="GridView1_RowUpdating">

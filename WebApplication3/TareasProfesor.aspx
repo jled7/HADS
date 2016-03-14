@@ -14,11 +14,17 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
                <asp:Panel ID="Panel5" runat="server" Height="81px">
-             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/InsertarTarea.aspx">Insertar Tarea</asp:HyperLink>
                    <br />
-                                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Profesor.aspx">Pagina Principal</asp:HyperLink>
+                   Asignaturas:<br />
+                   <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="codigo" DataValueField="codigo">
+                   </asp:DropDownList>
                    <br />
-                   Desconexion<br />
+                   <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/InsertarTarea.aspx">Insertar Tarea</asp:HyperLink>
+                   <br />
+                   <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Profesor.aspx">Pagina Principal</asp:HyperLink>
+                   <br />
+                   Desconexion<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS10ConnectionString %>" SelectCommand="SELECT [codigo] FROM [Asignaturas]"></asp:SqlDataSource>
+                   <br />
                    </asp:Panel>
      
         </asp:Panel>

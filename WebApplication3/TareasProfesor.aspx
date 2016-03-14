@@ -29,10 +29,25 @@
                            <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo" ReadOnly="True" />
                        </Columns>
                    </asp:GridView>
-                   <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:HADS10ConnectionString %>" SelectCommand="SELECT [Explotacion], [HEstimadas], [Descripcion], [Codigo] FROM [TareasGenericas] WHERE ([CodAsig] = @CodAsig)">
+                   <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:HADS10ConnectionString %>" SelectCommand="SELECT [Explotacion], [HEstimadas], [Descripcion], [Codigo] FROM [TareasGenericas] WHERE ([CodAsig] = @CodAsig)" DeleteCommand="DELETE FROM [TareasGenericas] WHERE [Codigo] = @Codigo" InsertCommand="INSERT INTO [TareasGenericas] ([Explotacion], [HEstimadas], [Descripcion], [Codigo]) VALUES (@Explotacion, @HEstimadas, @Descripcion, @Codigo)" UpdateCommand="UPDATE [TareasGenericas] SET [Explotacion] = @Explotacion, [HEstimadas] = @HEstimadas, [Descripcion] = @Descripcion WHERE [Codigo] = @Codigo">
+                       <DeleteParameters>
+                           <asp:Parameter Name="Codigo" Type="String" />
+                       </DeleteParameters>
+                       <InsertParameters>
+                           <asp:Parameter Name="Explotacion" Type="Boolean" />
+                           <asp:Parameter Name="HEstimadas" Type="Int32" />
+                           <asp:Parameter Name="Descripcion" Type="String" />
+                           <asp:Parameter Name="Codigo" Type="String" />
+                       </InsertParameters>
                        <SelectParameters>
                            <asp:ControlParameter ControlID="DropDownList1" Name="CodAsig" PropertyName="SelectedValue" Type="String" />
                        </SelectParameters>
+                       <UpdateParameters>
+                           <asp:Parameter Name="Explotacion" Type="Boolean" />
+                           <asp:Parameter Name="HEstimadas" Type="Int32" />
+                           <asp:Parameter Name="Descripcion" Type="String" />
+                           <asp:Parameter Name="Codigo" Type="String" />
+                       </UpdateParameters>
                    </asp:SqlDataSource>
                    <br />
                    <br />

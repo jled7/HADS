@@ -22,17 +22,16 @@
                 <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/ImportarTareaDS.aspx">Importar tareas (DataSet)</asp:HyperLink>
                 <br />
                 <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ExportarTarea.aspx">Exportar tareas</asp:HyperLink>
-                <br>
-                    <br></br>
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Desconexion" />
-                    <br>
-                        <br>
-                            <br></br>
-                            <br></br>
-                        </br>
-                    </br>
-                </br>
+                <br/>
+                    <br/>
+                <br/>
+            <br></br>
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Desconexion" />
+            <br>
+            <br></br>
             </br>
+                    </br/>
+                    </br/>
         </asp:Panel>
 
     </asp:Panel>

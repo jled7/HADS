@@ -33,16 +33,21 @@
                         <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                         <br />
                         <br />
-                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
-                            <asp:ListItem>codigo</asp:ListItem>
-                            <asp:ListItem>descripcion</asp:ListItem>
-                            <asp:ListItem>hestimadas</asp:ListItem>
-                        </asp:RadioButtonList>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                         <br />
                         <br />
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Profesor.aspx">Atras</asp:HyperLink>
                     </div>
                     <div class="col-md-7">
+                        <h2>Criterio de ordenación:</h2>
+                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
+                            <asp:ListItem>&nbsp; Codigo</asp:ListItem>
+                            <asp:ListItem>&nbsp; Descripcion</asp:ListItem>
+                            <asp:ListItem>&nbsp; hEstimadas</asp:ListItem>
+                        </asp:RadioButtonList>
                         <asp:Xml ID="Xml1" runat="server"></asp:Xml>
                         <br />
                         <br />
@@ -51,7 +56,7 @@
             </div>
 
 
-            
+
 
         </asp:Panel>
 

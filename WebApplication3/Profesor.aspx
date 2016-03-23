@@ -17,7 +17,14 @@
              <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TareasProfesor.aspx">Tareas</asp:HyperLink>
                    <br>
                    </br>
-                   <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Desconexion" /><br></br>
+                   <asp:HyperLink ID="HyperLink2" runat="server">Importar</asp:HyperLink>
+                   <br />
+                   <asp:HyperLink ID="HyperLink3" runat="server">Exportar</asp:HyperLink>
+                   <br></br>
+                   <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Desconexion" />
+                   <br>
+                   <br></br>
+                   </br>
                    </asp:Panel>
      
         </asp:Panel>

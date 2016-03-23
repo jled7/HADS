@@ -58,6 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Alumno.aspx" />
+    <Content Include="app_data\HAS.xml" />
+    <Content Include="app_data\SEG.xml" />
+    <Content Include="app_data\XSLTFile.xsl" />
     <Content Include="Confirmar.aspx" />
     <Content Include="Correcto.aspx" />
     <Content Include="css\bootstrap.min.css" />
@@ -164,6 +167,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="master\standard.Master" />
+    <Content Include="app_data\tareas.dtd" />
+    <None Include="app_data\tareas.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\PublishProfiles\HADS10 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\HADS10 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">

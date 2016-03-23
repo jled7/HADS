@@ -33,6 +33,12 @@
                         <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                         <br />
                         <br />
+                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
+                            <asp:ListItem>codigo</asp:ListItem>
+                            <asp:ListItem>descripcion</asp:ListItem>
+                            <asp:ListItem>hestimadas</asp:ListItem>
+                        </asp:RadioButtonList>
+                        <br />
                         <br />
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Profesor.aspx">Atras</asp:HyperLink>
                     </div>

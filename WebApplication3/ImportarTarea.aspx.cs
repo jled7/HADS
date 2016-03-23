@@ -76,5 +76,22 @@ namespace WebApplication3
         {
             DBUtility.close();
         }
+
+        protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (RadioButtonList1.SelectedIndex)
+            {
+                case 0:
+                    Xml1.TransformSource= Server.MapPath("app_data/SortCodigo.xsl");
+                    break;
+                case 1:
+                    Xml1.TransformSource = Server.MapPath("app_data/SortDesc.xsl");
+                    break;
+                case 2:
+                    Xml1.TransformSource = Server.MapPath("app_data/SortHest.xsl");
+                    break;
+
+            }
+        }
     }
 }

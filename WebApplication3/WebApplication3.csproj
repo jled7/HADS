@@ -63,6 +63,9 @@
     <Content Include="Alumno.aspx" />
     <Content Include="app_data\HAS.xml" />
     <Content Include="app_data\SEG.xml" />
+    <Content Include="app_data\SortCodigo.xsl" />
+    <Content Include="app_data\SortDesc.xsl" />
+    <Content Include="app_data\SortHEst.xsl" />
     <Content Include="app_data\XSLTFile.xsl" />
     <Content Include="Confirmar.aspx" />
     <Content Include="Correcto.aspx" />

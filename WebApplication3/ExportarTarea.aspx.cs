@@ -18,28 +18,38 @@ namespace WebApplication3
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-DataView view = (DataView)SqlDataSource1.Select(DataSourceSelectArguments.Empty);
-            
-DataTable table = view.ToTable("tarea");
+            try
+            {
+                DataView view = (DataView)SqlDataSource1.Select(DataSourceSelectArguments.Empty);
 
-DataSet ds = new DataSet("tareas");
-ds.Tables.Add(table);
+                DataTable table = view.ToTable("tarea");
 
-ds.WriteXml(Server.MapPath("app_data/" + DropDownList1.SelectedValue + "_E.xml"));
+                DataSet ds = new DataSet("tareas");
+                ds.Tables.Add(table);
 
-XmlDocument document = new XmlDocument();
-document.Load(Server.MapPath("app_data/" + DropDownList1.SelectedValue + "_E.xml"));
+                ds.WriteXml(Server.MapPath("app_data/" + DropDownList1.SelectedValue + "_E.xml"));
 
-XmlNodeList tareas = document.GetElementsByTagName("tareas");
+                XmlDocument document = new XmlDocument();
+                document.Load(Server.MapPath("app_data/" + DropDownList1.SelectedValue + "_E.xml"));
 
-XmlAttribute attr = document.CreateAttribute("xmlns:has");
-attr.Value = "http://ji.ehu.es/has";
-tareas[0].Attributes.Append(attr);
-document.Save(Server.MapPath("app_data/"+DropDownList1.SelectedValue + "_E.xml" ));
+                XmlNodeList tareas = document.GetElementsByTagName("tareas");
 
-Label1.ForeColor = System.Drawing.Color.Green;
-Label1.Text = "Introducido correctamente.";
+                XmlAttribute attr = document.CreateAttribute("xmlns:has");
+                attr.Value = "http://ji.ehu.es/has";
+                tareas[0].Attributes.Append(attr);
 
+                document.Save(Server.MapPath("app_data/" + DropDownList1.SelectedValue + "_E.xml"));
+                HyperLink1.NavigateUrl = "app_data/" + DropDownList1.SelectedValue + "_E.xml";
+                HyperLink1.Visible = true;
+                Label1.ForeColor = System.Drawing.Color.Green;
+                Label1.Text = "Exportado correctamente.";
+            }
+            catch (Exception ex)
+            {
+                Label1.ForeColor = System.Drawing.Color.Red;
+                Label1.Text = "Ha ocurrido un error al exportar las tareas.";
+                HyperLink1.Visible = false;
+            }            
         }
     }
 }

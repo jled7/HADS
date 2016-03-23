@@ -19,6 +19,8 @@ namespace WebApplication3
             {
                 Console.WriteLine("[Success] Connected to the database. ");
             }
+            Xml1.DocumentSource = Server.MapPath("app_data/" + DropDownList1.SelectedValue + ".xml");
+            Xml1.TransformSource = Server.MapPath("app_data/XSLTFile.xsl"); 
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)

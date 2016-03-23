@@ -48,6 +48,18 @@
     <Codigo>HAS11-LAB4</Codigo>
   </tarea>
   <tarea>
+    <Explotacion>true</Explotacion>
+    <HEstimadas>12</HEstimadas>
+    <Descripcion>Laboratorio 12 de la asignatura</Descripcion>
+    <Codigo>HAS16-Lab12</Codigo>
+  </tarea>
+  <tarea>
+    <Explotacion>false</Explotacion>
+    <HEstimadas>1</HEstimadas>
+    <Descripcion>Test 5 de la asignatura</Descripcion>
+    <Codigo>HAS16-Test5</Codigo>
+  </tarea>
+  <tarea>
     <Descripcion>kjhgljglj</Descripcion>
     <Codigo>HASHASHASH</Codigo>
   </tarea>

@@ -8,31 +8,31 @@
         <asp:Panel ID="Panel3" runat="server" Height="30px">
             <h1>Pagina de Profesor</h1>
         </asp:Panel>
-    
+
     </div>
-        <asp:Panel ID="Panel4" runat="server" Height="471px">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Panel ID="Panel4" runat="server" Height="471px">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
-               <asp:Panel ID="Panel5" runat="server" Height="81px">
-             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TareasProfesor.aspx">Tareas</asp:HyperLink>
-                   <br>
-                   <br></br>
-                   <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ImportarTarea.aspx">Importar</asp:HyperLink>
-                   <br />
-                   <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ExportarTarea.aspx">Exportar</asp:HyperLink>
-                   <br>
-                   <br></br>
-                   <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Desconexion" />
-                   <br>
-                   <br>
-                   <br></br>
-                   <br></br>
-                   </br>
-                   </br>
-                   </br>
-                   </br>
-                   </asp:Panel>
-     
+        <asp:Panel ID="Panel5" runat="server" Height="81px">
+            <h3>Acciones</h3>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TareasProfesor.aspx">Ver Tareas</asp:HyperLink>
+            <br><br>
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ImportarTarea.aspx">Importar tareas (XMLDocument)</asp:HyperLink>
+                <br />
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ExportarTarea.aspx">Exportar tareas</asp:HyperLink>
+                <br>
+                    <br></br>
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Desconexion" />
+                    <br>
+                        <br>
+                            <br></br>
+                            <br></br>
+                        </br>
+                    </br>
+                </br>
+            </br>
         </asp:Panel>
-    
-       </asp:Content>
+
+    </asp:Panel>
+
+</asp:Content>

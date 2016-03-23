@@ -18,4 +18,16 @@
     <Descripcion>Tareas del trabajo 20 de la asignatura</Descripcion>
     <Codigo>SEG08-Trabajo20</Codigo>
   </tarea>
+  <tarea>
+    <Explotacion>false</Explotacion>
+    <HEstimadas>3</HEstimadas>
+    <Descripcion>Test 1 sobre conceptos generales</Descripcion>
+    <Codigo>SEG16-Test1</Codigo>
+  </tarea>
+  <tarea>
+    <Explotacion>true</Explotacion>
+    <HEstimadas>10</HEstimadas>
+    <Descripcion>Cookies y Sesiones</Descripcion>
+    <Codigo>SEG16-Trabajo20</Codigo>
+  </tarea>
 </tareas>

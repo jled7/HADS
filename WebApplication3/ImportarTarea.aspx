@@ -7,7 +7,7 @@
 
      <div>
         <asp:Panel ID="Panel3" runat="server" Height="30px">
-            <h1>Pagina de Profesor</h1>
+            <h1>Importar Tareas desde XML</h1>
         </asp:Panel>
     
     </div>
@@ -25,8 +25,9 @@
                    </asp:DropDownList>
                    <br />
                    <br />
-                   <asp:Button ID="Button1" runat="server" Text="Importar XML" />
+                   <asp:Button ID="Button1" runat="server" Text="Importar XML" OnClick="Button1_Click" />
                    <br />
+                   <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                    <br />
                    <br />
                    <asp:Xml ID="Xml1" runat="server" DocumentSource="~/app_data/HAS.xml" TransformSource="~/app_data/XSLTFile.xsl"></asp:Xml>

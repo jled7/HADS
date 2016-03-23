@@ -1,0 +1,66 @@
+<?xml version="1.0" standalone="yes"?>
+<tareas xmlns:has="http://ji.ehu.es/has">
+  <tarea>
+    <Explotacion>true</Explotacion>
+    <HEstimadas>2</HEstimadas>
+    <Descripcion>asdadasdsad</Descripcion>
+    <Codigo>211212dasda</Codigo>
+  </tarea>
+  <tarea>
+    <Explotacion>true</Explotacion>
+    <HEstimadas>2</HEstimadas>
+    <Descripcion>asdadasdsad</Descripcion>
+    <Codigo>211212dasdasads</Codigo>
+  </tarea>
+  <tarea>
+    <Explotacion>true</Explotacion>
+    <HEstimadas>6</HEstimadas>
+    <Descripcion>ddfdfdfaa</Descripcion>
+    <Codigo>GIS-Lab4</Codigo>
+  </tarea>
+  <tarea>
+    <HEstimadas>2</HEstimadas>
+    <Descripcion>sadasasd</Descripcion>
+    <Codigo>HADS10</Codigo>
+  </tarea>
+  <tarea>
+    <Explotacion>true</Explotacion>
+    <HEstimadas>10</HEstimadas>
+    <Descripcion>aaaa</Descripcion>
+    <Codigo>HAS08-Lab10</Codigo>
+  </tarea>
+  <tarea>
+    <Explotacion>true</Explotacion>
+    <HEstimadas>12</HEstimadas>
+    <Descripcion>Laboratorio 12 de la asignatura</Descripcion>
+    <Codigo>HAS08-Lab12</Codigo>
+  </tarea>
+  <tarea>
+    <Explotacion>false</Explotacion>
+    <HEstimadas>3</HEstimadas>
+    <Descripcion>Test 5 de la asignatura</Descripcion>
+    <Codigo>HAS08-Test5</Codigo>
+  </tarea>
+  <tarea>
+    <Explotacion>true</Explotacion>
+    <HEstimadas>20</HEstimadas>
+    <Descripcion>lalalalal</Descripcion>
+    <Codigo>HAS11-LAB4</Codigo>
+  </tarea>
+  <tarea>
+    <Descripcion>kjhgljglj</Descripcion>
+    <Codigo>HASHASHASH</Codigo>
+  </tarea>
+  <tarea>
+    <Explotacion>true</Explotacion>
+    <HEstimadas>12</HEstimadas>
+    <Descripcion>lelelelelelelel</Descripcion>
+    <Codigo>Lab4</Codigo>
+  </tarea>
+  <tarea>
+    <Explotacion>false</Explotacion>
+    <HEstimadas>1</HEstimadas>
+    <Descripcion>10 preguntas ....</Descripcion>
+    <Codigo>Test1</Codigo>
+  </tarea>
+</tareas>

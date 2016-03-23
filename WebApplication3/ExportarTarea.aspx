@@ -29,6 +29,8 @@
                    <br />
                    <br />
                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Exportar a XML" />
+                   &nbsp;<br />
+                   <asp:Label ID="Label1" runat="server"></asp:Label>
                    <br />
                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Codigo" DataSourceID="SqlDataSource1">
                        <Columns>

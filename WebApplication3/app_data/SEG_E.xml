@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<tareas xmlns:has="http://ji.ehu.es/has">
+  <tarea>
+    <Explotacion>true</Explotacion>
+    <HEstimadas>2</HEstimadas>
+    <Descripcion>Aprobar a Jon</Descripcion>
+    <Codigo>SEG0001</Codigo>
+  </tarea>
+  <tarea>
+    <Explotacion>true</Explotacion>
+    <HEstimadas>3</HEstimadas>
+    <Descripcion>Test 12 de la asignatura</Descripcion>
+    <Codigo>SEG08-Test12</Codigo>
+  </tarea>
+  <tarea>
+    <Explotacion>false</Explotacion>
+    <HEstimadas>10</HEstimadas>
+    <Descripcion>Tareas del trabajo 20 de la asignatura</Descripcion>
+    <Codigo>SEG08-Trabajo20</Codigo>
+  </tarea>
+</tareas>

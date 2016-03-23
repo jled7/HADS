@@ -70,6 +70,7 @@
     <Content Include="css\style.css" />
     <Content Include="ExportarTarea.aspx" />
     <Content Include="ImportarTarea.aspx" />
+    <Content Include="ImportarTareaDS.aspx" />
     <Content Include="InsertarTarea.aspx" />
     <Content Include="InstanciarTarea.aspx" />
     <Content Include="js\bootstrap.min.js" />
@@ -118,6 +119,13 @@
     </Compile>
     <Compile Include="ImportarTarea.aspx.designer.cs">
       <DependentUpon>ImportarTarea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportarTareaDS.aspx.cs">
+      <DependentUpon>ImportarTareaDS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportarTareaDS.aspx.designer.cs">
+      <DependentUpon>ImportarTareaDS.aspx</DependentUpon>
     </Compile>
     <Compile Include="InsertarTarea.aspx.cs">
       <DependentUpon>InsertarTarea.aspx</DependentUpon>

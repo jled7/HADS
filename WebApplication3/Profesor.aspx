@@ -19,6 +19,8 @@
             <br><br>
                 <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ImportarTarea.aspx">Importar tareas (XMLDocument)</asp:HyperLink>
                 <br />
+                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/ImportarTareaDS.aspx">Importar tareas (DataSet)</asp:HyperLink>
+                <br />
                 <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ExportarTarea.aspx">Exportar tareas</asp:HyperLink>
                 <br>
                     <br></br>

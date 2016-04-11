@@ -37,7 +37,7 @@
 
                    </asp:GridView>
                    <br />
-                   <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Alumno.aspx">Pagina Principal</asp:HyperLink>
+                   <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="/restricted/alumno/Alumno.aspx">Pagina Principal</asp:HyperLink>
                    <br />
                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Desconexion" />
                    <br />

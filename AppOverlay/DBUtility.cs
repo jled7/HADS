@@ -33,6 +33,7 @@ namespace AppOverlay
         {
             Random random = new Random((int)DateTime.Now.Ticks & 0x0000FFFF); // Seed depende del tiempo
             numConfirmacion = (int)(random.NextDouble() * 9000000) + 1000000;
+            password = AppSecurity.AppSecurity.encriptar(password);
             string commandString = "INSERT INTO Usuarios VALUES ('" + correo + "', '" + nombre + " " + apellidos + "', '" + respuestaSecreta + "', '" + preguntaSecreta + "', '" + DNI + "', '" + confirmado + "', '" + "???" + "', '" + "A" +  "', '" + password + "')";
             command = new SqlCommand(commandString, connection);
             try

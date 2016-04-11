@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using AppOverlay;
@@ -12,16 +13,18 @@ namespace WebApplication3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (Session["email"] != null)
             {
                 switch (Session["tipo"].ToString())
                 {
                     case "P":
-                        Response.Redirect("~/Profesor.aspx", true);
+                        Response.Redirect("/restricted/profesor/Profesor.aspx", true);
                         break;
                     case "A":
-                        Response.Redirect("~/Alumno.aspx", true);
+                        Response.Redirect("/restricted/alumno/Alumno.aspx", true);
                         break;
+                    
                 }
             }
             if (DBUtility.connect())
@@ -41,18 +44,37 @@ namespace WebApplication3
                 }
                 else
                 {
-                    switch (status)
+                    if (TextBox1.Text.Equals("vadillo@ehu.es"))
                     {
-                        case 'P':
-                            Session["email"] = TextBox1.Text;
-                            Session["tipo"] = "P";
-                            Response.Redirect("~/Profesor.aspx", true);
-                            break;
-                        case 'A':
-                            Session["email"] = TextBox1.Text;
-                            Session["tipo"] = "A";
-                            Response.Redirect("~/Alumno.aspx", true);
-                            break;
+                        Session["email"] = TextBox1.Text;
+                        Session["tipo"] = "P";
+                        FormsAuthentication.SetAuthCookie("vadillo", true);
+                        Response.Redirect("/restricted/profesor/Profesor.aspx", true);
+
+                    }else if(TextBox1.Text.Equals("admin@ehu.es")){
+                        Session["email"] = TextBox1.Text;
+                        Session["tipo"] = "P";
+                        FormsAuthentication.SetAuthCookie("admin", true);
+                        Response.Redirect("/restricted/admin/admin.aspx",true);
+                    }
+                    
+                    
+                    else{
+                        switch (status)
+                        {
+                            case 'P':
+                                Session["email"] = TextBox1.Text;
+                                Session["tipo"] = "P";
+                                FormsAuthentication.SetAuthCookie("profesor", true);
+                                Response.Redirect("/restricted/profesor/Profesor.aspx", true);
+                                break;
+                            case 'A':
+                                Session["email"] = TextBox1.Text;
+                                Session["tipo"] = "A";
+                                FormsAuthentication.SetAuthCookie("alumno", true);
+                                Response.Redirect("/restricted/alumno/Alumno.aspx", true);
+                                break;
+                        }
                     }
                 }
             }

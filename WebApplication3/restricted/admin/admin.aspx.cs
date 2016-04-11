@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication3
+namespace WebApplication3.restricted.admin
 {
-    public partial class placeholder : System.Web.UI.Page
+    public partial class admin : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

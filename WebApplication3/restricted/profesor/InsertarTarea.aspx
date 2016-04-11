@@ -97,7 +97,7 @@
                    </asp:SqlDataSource>
                    <br>
                    <br></br>
-                   <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TareasProfesor.aspx">Ver Tareas</asp:HyperLink>
+                   <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/restricted/profesor/TareasProfesor.aspx">Ver Tareas</asp:HyperLink>
                    <br>
                    <br>
                    <br>

@@ -11,19 +11,19 @@ namespace WebApplication3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["email"] != null)
-            {
-                switch (Session["tipo"].ToString())
-                {
-                    case "A":
-                        Response.Redirect("~/Alumno.aspx", true);
-                        break;
-                }
-            }
-            else
-            {
-                Response.Redirect("Inicio.aspx");
-            }
+            //if (Session["email"] != null)
+            //{
+            //    switch (Session["tipo"].ToString())
+            //    {
+            //        case "A":
+            //            Response.Redirect("~/Alumno.aspx", true);
+            //            break;
+            //    }
+            //}
+            //else
+            //{
+            //    Response.Redirect("Inicio.aspx");
+            //}
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
@@ -33,8 +33,9 @@ namespace WebApplication3
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            System.Web.Security.FormsAuthentication.SignOut();
             Session.Abandon();
-            Response.Redirect("Inicio.aspx");
+            Response.Redirect("/Inicio.aspx");
         }
     }
 }

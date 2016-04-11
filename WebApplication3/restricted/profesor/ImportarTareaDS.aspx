@@ -32,7 +32,7 @@
                         <br />
                         <br />
                         <br />
-                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Profesor.aspx">Atras</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="/restricted/profesor/Profesor.aspx">Atras</asp:HyperLink>
                     </div>
                     <div class="col-md-7">
                         <asp:Xml ID="Xml1" runat="server"></asp:Xml>

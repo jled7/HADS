@@ -37,7 +37,7 @@
                         <asp:HyperLink ID="HyperLink1" runat="server" CssClass="btn btn-primary" Visible="False">Descargar</asp:HyperLink>
                         <br />
                         <br />
-                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Profesor.aspx">Atras</asp:HyperLink>
+                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="/restricted/profesor/Profesor.aspx">Atras</asp:HyperLink>
                     </div>
                     <div class="col-md-7">
                         <br />

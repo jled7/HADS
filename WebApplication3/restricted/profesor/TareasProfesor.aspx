@@ -18,7 +18,7 @@
                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="codigo" DataValueField="codigo" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True">
                    </asp:DropDownList>
                    <br />
-                   <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/InsertarTarea.aspx">Insertar Tarea</asp:HyperLink>
+                   <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/restricted/profesor/InsertarTarea.aspx">Insertar Tarea</asp:HyperLink>
                    <br />
                    <br />
                    <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Codigo" DataSourceID="SqlDataSource2" AutoGenerateEditButton="True">
@@ -51,7 +51,7 @@
                    </asp:SqlDataSource>
                    <br />
                    <br />
-                   <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Profesor.aspx">Pagina Principal</asp:HyperLink>
+                   <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="/restricted/profesor/Profesor.aspx">Pagina Principal</asp:HyperLink>
                    <br />
                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Desconexion" /><asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS10ConnectionString %>" SelectCommand="SELECT Asignaturas.codigo FROM ProfesoresGrupo INNER JOIN GruposClase ON ProfesoresGrupo.codigogrupo = GruposClase.codigo INNER JOIN Asignaturas ON GruposClase.codigoasig = Asignaturas.codigo WHERE (ProfesoresGrupo.email = @mail)">
                        <SelectParameters>

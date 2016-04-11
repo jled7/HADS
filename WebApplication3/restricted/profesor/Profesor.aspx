@@ -15,13 +15,13 @@
             <br />
         <asp:Panel ID="Panel5" runat="server" Height="81px">
             <h3>Acciones</h3>
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TareasProfesor.aspx">Ver Tareas</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/restricted/profesor/TareasProfesor.aspx">Ver Tareas</asp:HyperLink>
             <br><br>
-                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ImportarTarea.aspx">Importar tareas (XMLDocument)</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="/restricted/profesor/ImportarTarea.aspx">Importar tareas (XMLDocument)</asp:HyperLink>
                 <br />
-                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/ImportarTareaDS.aspx">Importar tareas (DataSet)</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="/restricted/profesor/ImportarTareaDS.aspx">Importar tareas (DataSet)</asp:HyperLink>
                 <br />
-                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ExportarTarea.aspx">Exportar tareas</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="/restricted/vadillo/ExportarTarea.aspx">Exportar tareas</asp:HyperLink> (* Solo Accesible para Vadillo)
                 <br/>
                     <br/>
                 <br/>

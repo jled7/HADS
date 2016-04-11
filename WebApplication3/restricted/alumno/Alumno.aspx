@@ -15,7 +15,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
                <asp:Panel ID="Panel5" runat="server" Height="81px">
-             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TareasAlumno.aspx">Tareas</asp:HyperLink>
+             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/restricted/alumno/TareasAlumno.aspx">Tareas</asp:HyperLink>
                    
                    
                    

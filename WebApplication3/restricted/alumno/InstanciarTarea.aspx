@@ -65,7 +65,7 @@
                    </asp:Panel>
                    <br />
                    <br />
-             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TareasAlumno.aspx">Ver Tareas Genericas</asp:HyperLink>
+             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/restricted/alumno/TareasAlumno.aspx">Ver Tareas Genericas</asp:HyperLink>
                    <br />
                    </asp:Panel>
      

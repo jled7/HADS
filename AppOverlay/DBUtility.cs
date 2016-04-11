@@ -51,6 +51,7 @@ namespace AppOverlay
         public static char login(String correo, String password)
         {
             int count;
+            password = AppSecurity.AppSecurity.encriptar(password);
             string commandString = "SELECT count(*) FROM Usuarios where email = '" + correo + "' and pass = '" + password + "'";
             command = new SqlCommand(commandString, connection);
             try

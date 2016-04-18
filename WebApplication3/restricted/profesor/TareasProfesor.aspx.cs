@@ -26,16 +26,18 @@ namespace WebApplication3
             //}
         }
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            GridView1.DataBind();
-        }
+
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             System.Web.Security.FormsAuthentication.SignOut();
             Session.Abandon();
             Response.Redirect("/Inicio.aspx");
+        }
+
+        protected void DropDownList3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridView3.DataBind();
         }
     }
 }

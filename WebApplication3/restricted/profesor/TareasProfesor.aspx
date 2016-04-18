@@ -7,21 +7,16 @@
         <asp:Panel ID="Panel3" runat="server" Height="30px">
             <h1>Tareas del Profesor</h1>
         </asp:Panel>
-    
     </div>
-        <asp:Panel ID="Panel4" runat="server" Height="471px">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <br />
-               <asp:Panel ID="Panel5" runat="server" Height="81px">
-                   <br />
-                   Asignaturas:<br />
-                   <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="codigo" DataValueField="codigo" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True">
+    <asp:ScriptManager ID="MainScriptManager" runat="server" />
+        <asp:UpdatePanel ID="UpdatePanel01" runat="server">
+            <ContentTemplate>
+                Asignaturas:<br />
+                   <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource1" DataTextField="codigo" DataValueField="codigo" OnSelectedIndexChanged="DropDownList3_SelectedIndexChanged" AutoPostBack="True">
                    </asp:DropDownList>
                    <br />
-                   <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/restricted/profesor/InsertarTarea.aspx">Insertar Tarea</asp:HyperLink>
-                   <br />
-                   <br />
-                   <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Codigo" DataSourceID="SqlDataSource2" AutoGenerateEditButton="True">
+                <br /><br />
+                <asp:GridView ID="GridView3" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Codigo" DataSourceID="SqlDataSource2" AutoGenerateEditButton="True">
                        <Columns>
                            <asp:CheckBoxField DataField="Explotacion" HeaderText="Explotacion" SortExpression="Explotacion" />
                            <asp:BoundField DataField="HEstimadas" HeaderText="HEstimadas" SortExpression="HEstimadas" />
@@ -29,6 +24,18 @@
                            <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Codigo" ReadOnly="True" />
                        </Columns>
                    </asp:GridView>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
+
+
+        <asp:Panel ID="Panel4" runat="server" Height="471px">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+               <asp:Panel ID="Panel5" runat="server" Height="81px">
+                   <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/restricted/profesor/InsertarTarea.aspx">Insertar Tarea</asp:HyperLink>
+                   <br />
+                   <br />
                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:HADS10ConnectionString %>" SelectCommand="SELECT [Explotacion], [HEstimadas], [Descripcion], [Codigo] FROM [TareasGenericas] WHERE ([CodAsig] = @CodAsig)" DeleteCommand="DELETE FROM [TareasGenericas] WHERE [Codigo] = @Codigo" InsertCommand="INSERT INTO [TareasGenericas] ([Explotacion], [HEstimadas], [Descripcion], [Codigo]) VALUES (@Explotacion, @HEstimadas, @Descripcion, @Codigo)" UpdateCommand="UPDATE [TareasGenericas] SET [Explotacion] = @Explotacion, [HEstimadas] = @HEstimadas, [Descripcion] = @Descripcion WHERE [Codigo] = @Codigo">
                        <DeleteParameters>
                            <asp:Parameter Name="Codigo" Type="String" />
@@ -40,7 +47,7 @@
                            <asp:Parameter Name="Codigo" Type="String" />
                        </InsertParameters>
                        <SelectParameters>
-                           <asp:ControlParameter ControlID="DropDownList1" Name="CodAsig" PropertyName="SelectedValue" Type="String" />
+                           <asp:ControlParameter ControlID="DropDownList3" Name="CodAsig" PropertyName="SelectedValue" Type="String" />
                        </SelectParameters>
                        <UpdateParameters>
                            <asp:Parameter Name="Explotacion" Type="Boolean" />

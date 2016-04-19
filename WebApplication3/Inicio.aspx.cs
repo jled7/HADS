@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -49,12 +50,20 @@ namespace WebApplication3
                         Session["email"] = TextBox1.Text;
                         Session["tipo"] = "P";
                         FormsAuthentication.SetAuthCookie("vadillo", true);
+                        //ajax vadillo
+                        ArrayList A = new ArrayList();
+                        Application.Lock();
+                        A = (ArrayList)Application.Contents["Profesores"];
+                        A.Add(Session["email"]);
+                        Application.Contents["Profesores"] = A;
+                        Application.UnLock();
                         Response.Redirect("/restricted/profesor/Profesor.aspx", true);
 
                     }else if(TextBox1.Text.Equals("admin@ehu.es")){
                         Session["email"] = TextBox1.Text;
                         Session["tipo"] = "P";
                         FormsAuthentication.SetAuthCookie("admin", true);
+
                         Response.Redirect("/restricted/admin/admin.aspx",true);
                     }
                     
@@ -66,12 +75,28 @@ namespace WebApplication3
                                 Session["email"] = TextBox1.Text;
                                 Session["tipo"] = "P";
                                 FormsAuthentication.SetAuthCookie("profesor", true);
+
+                                //ajax profesor
+                                ArrayList A = new ArrayList();
+                                Application.Lock();
+                                A = (ArrayList)Application.Contents["Profesores"];
+                                A.Add(Session["email"]);
+                                Application.Contents["Profesores"] = A;
+                                Application.UnLock();
+
                                 Response.Redirect("/restricted/profesor/Profesor.aspx", true);
                                 break;
                             case 'A':
                                 Session["email"] = TextBox1.Text;
                                 Session["tipo"] = "A";
                                 FormsAuthentication.SetAuthCookie("alumno", true);
+                                //ajax alumno
+                                ArrayList B = new ArrayList();
+                                Application.Lock();
+                                B = (ArrayList)Application.Contents["Alumnos"];
+                                B.Add(Session["email"]);
+                                Application.Contents["Alumnos"] = B;
+                                Application.UnLock();
                                 Response.Redirect("/restricted/alumno/Alumno.aspx", true);
                                 break;
                         }

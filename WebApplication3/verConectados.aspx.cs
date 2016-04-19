@@ -19,12 +19,12 @@ namespace WebApplication3
             ListaAlumnos.Text = "";
             ListaProfesores.Text = "";
             foreach (String alumno in alumnos)   {
-                ListaAlumnos.Text += alumno.ToString() + '\n';
+                ListaAlumnos.Text += alumno.ToString() + "<br />";
                 contadorAlumno++;
             }
             foreach (String profesor in profesores)
             {
-                ListaProfesores.Text += profesor.ToString() + '\n';
+                ListaProfesores.Text += profesor.ToString() + "<br />";
                 contadorProfesor++;
             }
             contadorProfesores.Text = contadorProfesor.ToString();

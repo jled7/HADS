@@ -64,6 +64,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="comprobarDNI.asmx" />
     <Content Include="Global.asax" />
     <Content Include="mediaHoras.asmx" />
     <Content Include="restricted\admin\admin.aspx" />
@@ -96,6 +97,10 @@
     <Content Include="Registro.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="comprobarDNI.asmx.cs">
+      <DependentUpon>comprobarDNI.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

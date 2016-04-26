@@ -26,23 +26,26 @@ namespace WebApplication3
             {
                 errorMessage.Text = "DNI incorrecto";
             }
-            if (wsComp.comprobar(TextBox1.Text).Equals("SI"))
+            else
             {
-                Boolean status = DBUtility.registerUser(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox5.Text, TextBox6.Text, TextBox7.Text, TextBox8.Text, 0, false);
-                if (status)
+                if (wsComp.comprobar(TextBox1.Text).Equals("SI"))
                 {
-                    Response.Redirect("~/Correcto.aspx");
+                    Boolean status = DBUtility.registerUser(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox5.Text, TextBox6.Text, TextBox7.Text, TextBox8.Text, 0, false);
+                    if (status)
+                    {
+                        Response.Redirect("~/Correcto.aspx");
+                    }
+                    else
+                    {
+                        errorMessage.Text = "Ya existe un usuario con ese correo";
+                    }
+
                 }
                 else
                 {
-                    errorMessage.Text = "Ya existe un usuario con ese correo";
+                    errorMessage.Text = "El usuario no esta matriculado.";
                 }
-
-          }
-          else
-            {
-                errorMessage.Text = "El usuario no esta matriculado.";
-            }
+            }       
         }
         
 

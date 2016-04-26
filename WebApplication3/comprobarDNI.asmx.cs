@@ -25,9 +25,9 @@ namespace WebApplication3
             dni = dni.ToUpper();
             Match match = new Regex(@"\b(\d{8}[A-Z])\b").Match(dni);
             if (match.Success)
-                return CORRESPONDENCIA[int.Parse(dni.Substring(0,8)) % 23] == dni.ElementAt(8);
+                return CORRESPONDENCIA[int.Parse(dni.Substring(0, 8)) % 23] == dni.ElementAt(8);
             else
-                throw new ArgumentException("El DNI debe contener 8 digitos."); ;
+                return false;
         }
     }
 }

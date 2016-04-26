@@ -25,18 +25,15 @@ namespace WebApplication3
         {
             if (DBUtility.connect())
             {
-                SqlCommand Command;
-                Command.
-                SqlCommand comando = new SqlCommand("SELECT AVG(HReales) as mReal FROM TareasPersonales WHERE (Codigo = @asig)", DBUtility.connection);
-
-
-                    DataTable dTable = new DataTable();
-                    DataSet dSet = new DataSet();
-
-
-                return asig + " media";
+                SqlCommand command = new SqlCommand("SELECT AVG(HReales) FROM EstudiantesTareas inner join TareasGenericas ON EstudiantesTareas.CodTarea = TareasGenericas.Codigo WHERE (TareasGenericas.CodAsig='" + asig + "')", DBUtility.connection);
+                SqlDataReader dReader = null;
+                dReader = command.ExecuteReader();
+                dReader.Read();
+                String res = dReader.GetSqlValue(0).ToString();
+                dReader.Close();
+                return res;
             }
-            return "media";
+            return "0";
         }  
     }
 }

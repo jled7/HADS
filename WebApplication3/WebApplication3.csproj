@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="mediaHoras.asmx" />
     <Content Include="restricted\admin\admin.aspx" />
     <Content Include="restricted\alumno\Alumno.aspx" />
     <Content Include="app_data\HAS.xml" />
@@ -77,6 +78,7 @@
     <Content Include="Correcto.aspx" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\style.css" />
+    <Content Include="restricted\vadillo\coordinador.aspx" />
     <Content Include="restricted\vadillo\ExportarTarea.aspx" />
     <Content Include="restricted\profesor\ImportarTarea.aspx" />
     <Content Include="restricted\profesor\ImportarTareaDS.aspx" />
@@ -96,6 +98,15 @@
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="mediaHoras.asmx.cs">
+      <DependentUpon>mediaHoras.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="restricted\admin\admin.aspx.cs">
       <DependentUpon>admin.aspx</DependentUpon>
@@ -124,6 +135,13 @@
     </Compile>
     <Compile Include="Correcto.aspx.designer.cs">
       <DependentUpon>Correcto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="restricted\vadillo\coordinador.aspx.cs">
+      <DependentUpon>coordinador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="restricted\vadillo\coordinador.aspx.designer.cs">
+      <DependentUpon>coordinador.aspx</DependentUpon>
     </Compile>
     <Compile Include="restricted\vadillo\ExportarTarea.aspx.cs">
       <DependentUpon>ExportarTarea.aspx</DependentUpon>
@@ -210,6 +228,11 @@
     <Compile Include="verConectados.aspx.designer.cs">
       <DependentUpon>verConectados.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Web References\comprobarMatricula\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="master\standard.Master" />
@@ -223,6 +246,15 @@
     <Content Include="restricted\profesor\Web.config" />
     <Content Include="restricted\vadillo\Web.config" />
     <Content Include="restricted\admin\Web.config" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\comprobarMatricula\comprobarmatricula.wsdl" />
+    <Content Include="Web References\comprobarMatricula\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -236,7 +268,25 @@
       <Name>AppOverlay</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://sw14.hol.es/ServiciosWeb/comprobarmatricula.php%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\comprobarMatricula\</RelPath>
+      <UpdateFromURL>http://sw14.hol.es/ServiciosWeb/comprobarmatricula.php%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebApplication3_comprobarMatricula_Matriculas</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

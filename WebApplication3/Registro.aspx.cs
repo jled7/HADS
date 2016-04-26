@@ -20,17 +20,28 @@ namespace WebApplication3
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Boolean status = DBUtility.registerUser(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox5.Text, TextBox6.Text, TextBox7.Text, TextBox8.Text, 0, false);
-            if (status)
+            comprobarMatricula.Matriculas wsComp = new comprobarMatricula.Matriculas();
+
+            if (wsComp.comprobar(TextBox1.Text).Equals("SI"))
             {
-                Response.Redirect("~/Correcto.aspx");
-            }
-            else
+                Boolean status = DBUtility.registerUser(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox5.Text, TextBox6.Text, TextBox7.Text, TextBox8.Text, 0, false);
+                if (status)
+                {
+                    Response.Redirect("~/Correcto.aspx");
+                }
+                else
+                {
+                    errorMessage.Text = "Ya existe un usuario con ese correo";
+                }
+
+          }
+          else
             {
-                errorMessage.Text = "Ya existe un usuario con ese correo";
+                //finsi comprobar
+                errorMessage.Text = "El usuario no esta matriculado.";
             }
-            
         }
+        
 
         protected void Page_Unload(object sender, EventArgs e)
         {

@@ -23,12 +23,20 @@
                 <br />
                 <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="/restricted/vadillo/ExportarTarea.aspx">Exportar tareas</asp:HyperLink> (* Solo Accesible para Vadillo)
                 <br/>
+                    <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/restricted/vadillo/coordinador.aspx">Media Tareas</asp:HyperLink>
                     <br/>
                 <br/>
+            <br>
             <br></br>
             <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Desconexion" />
             <br>
+            <br>
             <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            </br>
+            </br>
             </br>
                     </br/>
                     </br/>

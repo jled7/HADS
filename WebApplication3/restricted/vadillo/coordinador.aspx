@@ -8,6 +8,9 @@
 
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HADS10ConnectionString %>" SelectCommand="SELECT [Nombre], [codigo] FROM [Asignaturas]"></asp:SqlDataSource>
 
+            <br />
+            La media de las horas reales es:<br />
+
             <asp:Label ID="Label1" runat="server"></asp:Label>
 
 </asp:Content>

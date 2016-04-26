@@ -37,20 +37,3 @@ namespace WebApplication3
         }  
     }
 }
-
-//SqlCommand command = new SqlCommand("SELECT HReales FROM TareasPersonales WHERE (Codigo = ' " + asig + " ')", DBUtility.connection);
-/*
-          conectar()
-+
-+        Dim conexion As SqlConnection = getConexion()
-+        Dim comando As New SqlCommand("DedicacionMediaAsignatura", conexion)
-+
-+        comando.CommandType = CommandType.StoredProcedure
-+        comando.Parameters.AddWithValue("asig", New SqlParameter).Value = asignatura
-+
-+        Dim valor As String = comando.ExecuteScalar().ToString
-+
-+
-+        cerrarConexion()
-+
-+        Return valor*/

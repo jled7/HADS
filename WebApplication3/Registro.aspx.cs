@@ -37,7 +37,6 @@ namespace WebApplication3
           }
           else
             {
-                //finsi comprobar
                 errorMessage.Text = "El usuario no esta matriculado.";
             }
         }
